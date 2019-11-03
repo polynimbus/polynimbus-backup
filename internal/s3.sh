@@ -28,5 +28,5 @@ for entry in $buckets; do
 	fi
 
 	echo "### syncing s3://$bucket"
-	s3cmd -c $file sync s3://$bucket $path
+	s3cmd -c $file sync s3://$bucket/ $path/ --skip-existing
 done
