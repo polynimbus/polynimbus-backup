@@ -1,6 +1,8 @@
 #!/bin/bash
 
-buckets=`cat /var/cache/polynimbus/inventory/object-storage.list |grep ^aws |grep " s3 " |awk '{ print $2 ":" $5 }'`
+list=$1
+
+buckets=`grep ^aws $list |grep ' s3 ' |awk '{ print $2 ":" $5 }'`
 for entry in $buckets; do
 
 	account="${entry%:*}"
