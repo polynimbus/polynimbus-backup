@@ -15,7 +15,7 @@ mkdir -p -m 0700 \
 	/srv/mounts/azure \
 	/srv/cifs/azure
 chmod 0710 /var/cache/polynimbus
-touch /var/cache/polynimbus/inventory/object-storage.list /var/cache/polynimbus/aws/s3-backup.blacklist
+touch /var/cache/polynimbus/inventory/storage.list /var/cache/polynimbus/aws/s3-backup.blacklist
 
 if ! grep -q /opt/polynimbus-backup/cron /etc/crontab; then
 	echo "setting up crontab entry"
