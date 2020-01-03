@@ -1,0 +1,1 @@
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[.0-9]+\] CIFS VFS: ioctl error in smb2_get_dfs_refer rc=-5$
