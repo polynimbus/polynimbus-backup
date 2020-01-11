@@ -9,10 +9,12 @@ echo "setting up Polynimbus Backup directories and files"
 mkdir -p -m 0700 \
 	/var/cache/polynimbus/inventory \
 	/var/cache/polynimbus/aws/s3cmd \
+	/var/cache/polynimbus/linode/s3cmd \
 	/var/cache/polynimbus/azure/storage-accounts \
 	/var/log/polynimbus \
 	/srv/mounts/s3 \
 	/srv/mounts/azure \
+	/srv/mounts/linode \
 	/srv/cifs/azure
 chmod 0710 /var/cache/polynimbus
 touch /var/cache/polynimbus/inventory/storage.list /var/cache/polynimbus/aws/s3-backup.blacklist
