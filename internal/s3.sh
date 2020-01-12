@@ -24,7 +24,7 @@ for entry in $buckets; do
 		continue
 	fi
 
-	path="/srv/mounts/s3/$account-$bucket"
+	path="/srv/polynimbus/s3/$account-$bucket"
 	if [ ! -d $path ]; then
 		mkdir -p -m 0700 $path
 	fi

@@ -26,7 +26,7 @@ for entry in $entries; do
 
 		echo "### syncing share $share"
 		mount -t cifs $remote $path -o vers=3.0,credentials=$file,serverino
-		rsync -av --delete $path /srv/mounts/azure
+		rsync -av --delete $path /srv/polynimbus/azure
 		umount $path
 	done
 done
