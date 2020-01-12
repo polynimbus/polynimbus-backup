@@ -5,14 +5,14 @@ list=$1
 entries=`grep ^azure $list |grep ' files ' |awk '{ print $2 ":" $7 }' |sort |uniq`
 for entry in $entries; do
 
-    account="${entry%:*}"
-    storage="${entry##*:}"
+	account="${entry%:*}"
+	storage="${entry##*:}"
 
-    file="/var/cache/polynimbus/azure/storage-accounts/$account-$storage.cifs"
-    if [ ! -f $file ]; then
+	file="/var/cache/polynimbus/azure/storage-accounts/$account-$storage.cifs"
+	if [ ! -f $file ]; then
 		echo "### skipping Azure Storage account $account/$storage (credentials file not found)"
 		continue
-    fi
+	fi
 
 	echo "### processing Azure Storage account $account/$storage"
 	shares=`grep "^azure $account files " $list |grep $storage$ |cut -d' ' -f5`

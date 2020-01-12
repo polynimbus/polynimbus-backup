@@ -12,6 +12,7 @@ mkdir -p -m 0700 \
 	/var/cache/polynimbus/linode/s3cmd \
 	/var/cache/polynimbus/azure/storage-accounts \
 	/var/log/polynimbus \
+	/etc/polynimbus \
 	/srv/polynimbus/s3 \
 	/srv/polynimbus/azure \
 	/srv/polynimbus/linode \
