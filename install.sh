@@ -15,6 +15,7 @@ mkdir -p -m 0700 \
 	/var/cache/polynimbus/accounts \
 	/var/cache/polynimbus/accounts/b2 \
 	/var/log/polynimbus \
+	/srv/polynimbus/b2 \
 	/srv/polynimbus/gs \
 	/srv/polynimbus/s3 \
 	/srv/polynimbus/azure \
