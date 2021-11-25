@@ -8,17 +8,17 @@ for entry in $buckets; do
 	account="${entry%:*}"
 	bucket="${entry##*:}"
 
-	if grep -qxF $account /var/cache/polynimbus/aws/s3-backup.blacklist; then
+	if grep -qxF $account /var/cache/polynimbus/settings/aws/s3-backup.blacklist; then
 		echo "### skipping bucket $account/$bucket (blacklisted by account)"
 		continue
 	fi
 
-	if grep -qxF "$account/$bucket" /var/cache/polynimbus/aws/s3-backup.blacklist; then
+	if grep -qxF "$account/$bucket" /var/cache/polynimbus/settings/aws/s3-backup.blacklist; then
 		echo "### skipping bucket $account/$bucket (blacklisted)"
 		continue
 	fi
 
-	file="/var/cache/polynimbus/aws/s3cmd/$account-$bucket.ini"
+	file=/var/cache/polynimbus/cache/aws/s3cmd/$account-$bucket.ini
 	if [ ! -f $file ]; then
 		echo "### skipping bucket $account/$bucket (s3cmd configuration file not found)"
 		continue

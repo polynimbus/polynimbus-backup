@@ -8,7 +8,7 @@ for entry in $buckets; do
 	account="${entry%:*}"
 	bucket="${entry##*:}"
 
-	file="/var/cache/polynimbus/linode/s3cmd/$account.ini"
+	file=/var/cache/polynimbus/cache/linode/s3cmd/$account.ini
 	if [ ! -f $file ]; then
 		echo "### skipping bucket $account/$bucket (s3cmd configuration file not found)"
 		continue

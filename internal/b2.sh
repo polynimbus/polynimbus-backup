@@ -8,7 +8,7 @@ for entry in $buckets; do
 	account="${entry%:*}"
 	bucket="${entry##*:}"
 
-	file=/etc/polynimbus/b2/$account.db
+	file=/var/cache/polynimbus/accounts/b2/$account.db
 	if [ ! -f $file ]; then
 		echo "### skipping bucket $account/$bucket (b2 configuration file not found)"
 		continue

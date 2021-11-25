@@ -8,7 +8,7 @@ for entry in $entries; do
 	account="${entry%:*}"
 	storage="${entry##*:}"
 
-	file="/var/cache/polynimbus/azure/storage-accounts/$account-$storage.cifs"
+	file=/var/cache/polynimbus/cache/azure/storage-accounts/$account-$storage.cifs
 	if [ ! -f $file ]; then
 		echo "### skipping Azure Storage account $account/$storage (credentials file not found)"
 		continue
